@@ -1,0 +1,24 @@
+name: Unsupported version
+description: Report an unsupported Minecraft version
+title: "[Unsupported] Version X"
+labels:
+  - unsupported version
+assignees:
+  - Mimexe
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Unsupported version(s)
+      description: "List the Minecraft version(s) that are not supported (e.g., 1.19.x, 1.20.1)."
+      placeholder: "1.19.x"
+    validations:
+      required: true
+  - type: checkboxes
+    id: dupcheck
+    attributes:
+      label: Before submitting
+      description: Please confirm the following
+      options:
+        - label: I searched existing issues to check if this version is already reported
+          required: true
