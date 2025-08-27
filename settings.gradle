@@ -1,15 +1,17 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven {
-            name = 'MinecraftForge'
-            url = 'https://maven.minecraftforge.net/'
-        }
+        maven { url = "https://maven.minecraftforge.net/" }
+        maven { url = "https://maven.fabricmc.net/" }
+        mavenCentral()
     }
 }
 
-plugins {
-    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
-}
+rootProject.name = "AutoMaximize"
 
-rootProject.name = 'automaximize'
+
+include("common", "fabric", "forge")
+
+project(':common').projectDir = file('common')
+project(':fabric').projectDir = file('fabric')
+project(':forge').projectDir = file('forge')

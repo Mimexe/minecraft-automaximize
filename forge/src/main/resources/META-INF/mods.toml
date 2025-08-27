@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT"
+
+[[mods]]
+modId = "automaximize"
+version = "1.0.0"
+displayName = "AutoMaximize"
+description = '''
+Automatically maximizes the Minecraft window when the title screen is displayed for the first time.
+'''
+authors = "MimeDev"
+credits = "Thanks to the Minecraft modding community"
+logoFile = "logo.png"
+
+[[dependencies.automaximize]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.automaximize]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20,1.21)"
+ordering = "NONE"
+side = "CLIENT"

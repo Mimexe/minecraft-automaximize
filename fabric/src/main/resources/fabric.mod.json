@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "automaximize",
+  "version": "${version}",
+  "name": "AutoMaximize",
+  "description": "Automatically maximizes the game window on first launch",
+  "authors": [
+    "MimeDev"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "fr.mimedev.automaximize.fabric.AutoMaximizeFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.10",
+    "minecraft": ">=1.20 <1.21"
+  }
+}
