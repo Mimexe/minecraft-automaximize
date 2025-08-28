@@ -4,7 +4,7 @@ license = "MIT"
 
 [[mods]]
 modId = "automaximize"
-version = "1.0.0"
+version = "${version}"
 displayName = "AutoMaximize"
 description = '''
 Automatically maximizes the Minecraft window when the title screen is displayed for the first time.
