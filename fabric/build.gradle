@@ -15,6 +15,14 @@ tasks {
     }
 }
 
+processResources {
+    inputs.property "version", mod_version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": mod_version
+    }
+}
+
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
