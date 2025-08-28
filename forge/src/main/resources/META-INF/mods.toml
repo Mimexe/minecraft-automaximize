@@ -23,6 +23,6 @@ side = "CLIENT"
 [[dependencies.automaximize]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20,1.21)"
+versionRange = "[1.20,1.20.6)"
 ordering = "NONE"
 side = "CLIENT"
