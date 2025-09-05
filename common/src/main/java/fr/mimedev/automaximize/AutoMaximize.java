@@ -11,10 +11,14 @@ public class AutoMaximize {
 
     public static void onScreenOpen(Object screen) {
         if (windowMaximizer != null && windowMaximizer.isTitleScreen(screen) && firstRun) {
-            windowMaximizer.logInfo("Maximizing window (AutoMaximize)");
-            windowMaximizer.maximizeWindow();
-            firstRun = false;
+            maximize();
         }
+    }
+
+    public static void maximize() {
+        windowMaximizer.logInfo("Maximizing window (AutoMaximize)");
+        windowMaximizer.maximizeWindow();
+        firstRun = false;
     }
 
     public interface WindowMaximizer {

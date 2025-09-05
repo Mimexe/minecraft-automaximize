@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.10.5'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
     id 'java'
 }
 
@@ -8,10 +8,12 @@ version = mod_version
 
 tasks {
     jar {
-        archiveFileName = mod_id + '-fabric-' + mod_version + '.jar'
-        destinationDirectory = file("$rootDir/build")
         from(project(':common').sourceSets.main.output)
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+    remapJar {
+        archiveFileName = mod_id + '-fabric-' + mod_version + '.jar'
+        destinationDirectory = file("$rootDir/build")
     }
 }
 
@@ -24,7 +26,7 @@ processResources {
 }
 
 java {
-    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
 }
 
 repositories {
