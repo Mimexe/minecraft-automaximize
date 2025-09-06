@@ -17,3 +17,24 @@ run/
 
 .DS_Store
 Thumbs.db
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+
+# idea
+out
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+runs
+run-data
+
+repo
