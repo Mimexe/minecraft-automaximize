@@ -1,9 +1,10 @@
 {
   "pack": {
     "description": "AutoMaximize mod resources",
-    "pack_format": 15,
-    "forge:resource_pack_format": 15,
-    "forge:data_pack_format": 12
+    "max_format": 101,
+    "min_format": [
+      101,
+      1
+    ]
   }
 }
-

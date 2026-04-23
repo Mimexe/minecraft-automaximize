@@ -17,7 +17,7 @@ public class NeoForgeWindowMaximizer implements AutoMaximize.WindowMaximizer {
 
     @Override
     public void maximizeWindow() {
-        GLFW.glfwMaximizeWindow(Minecraft.getInstance().getWindow().getWindow());
+        GLFW.glfwMaximizeWindow(Minecraft.getInstance().getWindow().handle());
     }
 
     @Override

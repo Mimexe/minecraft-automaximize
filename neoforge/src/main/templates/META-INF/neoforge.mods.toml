@@ -10,19 +10,18 @@ description = '''
 Automatically maximizes the Minecraft window when the title screen is displayed for the first time.
 '''
 authors = "MimeDev"
-credits = "Thanks to the Minecraft modding community"
 logoFile = "logo.png"
 
 [[dependencies.automaximize]]
 modId = "neoforge"
 mandatory = true
-versionRange = "[21.1.207,)"
+versionRange = "[26.1.0.19-beta,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.automaximize]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.21.1,1.21.6)"
+versionRange = "[26.1,26.1.2]"
 ordering = "NONE"
 side = "BOTH"

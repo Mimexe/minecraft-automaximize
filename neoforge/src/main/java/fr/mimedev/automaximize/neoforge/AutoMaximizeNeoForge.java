@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.ScreenEvent;
 
 @Mod(AutoMaximize.MODID)
 public class AutoMaximizeNeoForge {
@@ -17,15 +18,12 @@ public class AutoMaximizeNeoForge {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             AutoMaximize.setWindowMaximizer(new NeoForgeWindowMaximizer());
-            AutoMaximize.maximize();
+
+        }
+
+        @SubscribeEvent
+        public static void onMainMenu(ScreenEvent.Opening event) {
+            AutoMaximize.onScreenOpen(event.getScreen());
         }
     }
-
-//    @EventBusSubscriber(modid = AutoMaximize.MODID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
-//    public static class ClientEvents {
-//        @SubscribeEvent
-//        public static void onScreenOpen(ScreenEvent.Opening event) {
-//            AutoMaximize.onScreenOpen(event.getNewScreen());
-//        }
-//    }
 }
